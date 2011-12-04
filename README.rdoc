@@ -1,0 +1,10 @@
+= DESCRIPTION:
+  
+  installs rtorrent and creates an rtorrent user
+
+= REQUIREMENTS:
+
+= ATTRIBUTES:
+
+= USAGE:
+
