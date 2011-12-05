@@ -1,5 +1,6 @@
 
 default[:rtorrent][:user][:name] = 'rtorrent'
+default[:rtorrent][:user][:group] = 'torrent'
 default[:rtorrent][:user][:home] = "/home/rtorrent"
 default[:rtorrent][:download_dir] = default[:rtorrent][:user][:home] + "/torrents"
 default[:rtorrent][:watch_dir] = default[:rtorrent][:user][:home] + "/.torrents_watch"
