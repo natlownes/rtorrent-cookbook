@@ -7,6 +7,10 @@
 
 package 'rtorrent'
 
+group node[:rtorrent][:user][:group] do
+  action :create
+end
+
 user node[:rtorrent][:user][:name] do
   home node[:rtorrent][:user][:home]
   gid node[:rtorrent][:user][:group] 
