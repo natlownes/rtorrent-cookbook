@@ -37,6 +37,7 @@ template config_file do
   source "rtorrent.rc.erb"
   owner node[:rtorrent][:user][:home]
   group node[:rtorrent][:user][:group]
+  mode  "0750"
 
   variables(
     :watch_interval => node[:rtorrent][:watch_interval],
