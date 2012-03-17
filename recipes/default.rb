@@ -22,6 +22,8 @@ directory node[:rtorrent][:download_dir] do
   mode "0777"
   action :create
   recursive true
+
+  only_if { !::File.directory?(node[:rtorrent][:download_dir]) }
 end
 
 directory node[:rtorrent][:watch_dir] do
