@@ -35,7 +35,7 @@ end
 config_file = File.join(node[:rtorrent][:user][:home], '.rtorrent.rc')
 template config_file do
   source "rtorrent.rc.erb"
-  owner node[:rtorrent][:user][:home]
+  owner node[:rtorrent][:user][:name]
   group node[:rtorrent][:user][:group]
   mode  "0750"
 
