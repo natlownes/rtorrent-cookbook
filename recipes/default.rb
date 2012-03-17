@@ -30,6 +30,8 @@ directory node[:rtorrent][:watch_dir] do
   mode "0777"
   action :create
   recursive true
+
+  only_if { !::File.directory?(node[:rtorrent][:watch_dir]) }
 end
 
 config_file = File.join(node[:rtorrent][:user][:home], '.rtorrent.rc')
